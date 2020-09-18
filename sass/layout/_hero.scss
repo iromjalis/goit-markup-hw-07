@@ -1,0 +1,72 @@
+/* === HERO ===*/
+
+.hero-title {
+    width: 696px;
+    margin: auto auto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white-color);
+  
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  
+  .main-hero-container{
+    background-color: var(--hero-bg);
+  }
+  .hero{
+    margin: auto auto;
+    display: block;
+    min-width: 1600px;
+    height: 600px;
+    object-fit: fill;
+    background-image:  url(../images/hero.jpg);
+    background-color: var(--hero-bg);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 200px 452px;
+    background-position: 50% 50%;
+  
+  }
+  
+  .hero>img{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container .hero{
+    padding-top: 200px ;
+    padding-bottom: 200px;
+  }
+  
+  .hero-btn{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 10px 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  }
+  
+  .item{
+    margin-right:30px;
+  }
+  
+  .hero-btn:hover,
+  .hero-btn:focus{
+    color: var(--title-color);
+  }
+  
+  /* === END HERO ===*/

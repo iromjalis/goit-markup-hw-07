@@ -1,0 +1,175 @@
+
+/* === FORM === */
+.group{
+    width: 528px;
+    height: 581px;
+  }
+  
+  .form-field{
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+   .form-input{
+    width: 448px;
+    height: 40px;
+    padding: 0;
+    padding-left: 42px;
+    padding-right: 42px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);  
+    color: var(--accent-color);
+    margin-bottom: 10px;
+  } 
+  
+  .form-label{
+    display: inline-block;
+    position: absolute;
+    top: 19%;
+    left:0px;
+    margin-left: 42px;
+  }
+  .form-input:focus +.form-label,
+  .form-input:not(:placeholder-shown) +.form-label{
+  transform: translateY(-50px);
+  fill: var(--accent-color);
+  border-color:  var(--accent-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  }
+  
+  .form-input:placeholder-shown{
+    background-color: white;
+  }
+  
+  textarea{
+    resize: none;
+  }
+  .icon{
+    position: absolute;
+    top:0;
+    left:0;
+    margin: 12px 15px;
+  
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+  }
+  .form-input:focus ~ .icon{
+    fill: var(--accent-color);
+  }
+  
+  /*чтобы пользователь не увеличил поле*/
+  .textarea-input{
+    width: 448px;
+    height: 120px;
+    resize: none;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(33, 33, 33, 0.2);  
+  }
+  
+  .textarea-input:focus +.form-label.text,
+  .textarea-input:not(:placeholder-shown) +.form-label.text{
+  transform: translateY(-50px);
+  fill: var(--accent-color);
+  border-color:  var(--accent-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  }
+  
+  /* Оставьте свои данные, мы вам перезвоним */
+  .group-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+  
+  .group-title-item{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 4px;
+  }
+  .form-label.text{
+    display: inline-block;
+    position: absolute;
+    top:0;
+    left:0;
+    margin:0;
+    padding: 12px 16px;
+    border: none;
+    color: var(--text-color);
+  }
+  .form-field:focus .form-label.text{
+    transform: translateY(-50px);
+    color: var(--accent-color);
+  }
+  
+  .checkbox{
+    background-color: var(--accent-color);
+  }
+  .contract-title{
+    margin-bottom: 30px;
+  }
+  a.contract{
+    color: var(--accent-color);
+  }
+  .send-btn{
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--accent-color);
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  padding: 10px 55px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .form-input:focus,
+  .form-input:hover,
+  textarea:focus,
+  textarea:hove, .checkbox:checked, .checkbox:focus{
+    border-color: var(--accent-color);
+  }
+  /* ===CHECKBOX ===*/
+  /*  .checkbox{
+    -webkit-appearance: none;
+    position: absolute;
+  } */
+  
+   .label{
+    position: relative;
+    top:0;
+    left:0;
+    display: inline;
+  }
+  
+  .checkbox-icon{
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+  }
+  
+  .checkbox:checked +.icon{
+   background-image: url(../images/SVG/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: 2px solid var(--accent-color);
+    border: none;
+  }
+  
+  /* === END CHECKBOX ===*/
+  
+  /* === END FORM ===*/
+  

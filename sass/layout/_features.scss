@@ -1,0 +1,77 @@
+
+/* === FEATURES ===*/
+.features.container.flex{
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .features-list{
+    display:inline-flex;
+  
+  }
+  
+  .title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .title-text{
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .features-list-item:nth-child(1)::before{
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    background-color:var(--team-bg);
+    background-image: url(../images/SVG/tv-table.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  
+  .features-list-item:nth-child(2)::before{
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    background-color:var(--team-bg);
+    background-image: url(../images/SVG/clock.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  
+  .features-list-item:nth-child(3)::before{
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    background-color:var(--team-bg);
+    background-image: url(../images/SVG/computer.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  
+  .features-list-item:nth-child(4)::before{
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    background-color:var(--team-bg);
+    background-image: url(../images/SVG/astronaut.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  
+  /* === END FEATURES ===*/
+  
+  
