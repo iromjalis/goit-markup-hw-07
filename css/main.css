@@ -1,4 +1,8 @@
-body {
-  background-color: red;
+.body {
+  color: red;
+}
+
+.body :hover {
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */
