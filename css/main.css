@@ -68,10 +68,17 @@ body {
   margin: 0 auto;
 }
 
-header {
+header .flex.container {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+header .flex.container {
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  height: 80px;
 }
 /*# sourceMappingURL=main.css.map */
