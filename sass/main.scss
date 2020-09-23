@@ -1,6 +1,2 @@
-.body{
-    color: red;
-    :hover{
-        color: black;
-    }
-}
+@import "./utils/transfrom";
+@import './utils/colors';
