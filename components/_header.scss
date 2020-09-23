@@ -12,3 +12,15 @@ header .flex.container{
   padding-bottom: 25px;
   height: 80px;
 }
+
+%icon-WebStudio{
+  width: 145px;
+  height: 31px;
+  margin-right: 93px;
+}
+
+.icon-Web-Studio{
+  @extend %icon-WebStudio;
+  &-footer{
+  }
+}
