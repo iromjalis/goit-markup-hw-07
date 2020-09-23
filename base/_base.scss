@@ -36,7 +36,11 @@ ul,
 a{
   text-decoration: none;
 }
-.flex{
+%flex{
   display: flex;
   align-items: center;
+}
+
+.nav:visited{
+  color: $title-color;
 }
