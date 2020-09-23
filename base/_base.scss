@@ -1,6 +1,6 @@
 *,
 *::before,
-**::after, {
+**::after{
   padding: 0;
   margin: 0;
 }
@@ -36,11 +36,21 @@ ul,
 a{
   text-decoration: none;
 }
-%flex{
+.flex{
   display: flex;
   align-items: center;
 }
 
 .nav:visited{
   color: $title-color;
+}
+body{
+  font-family: Roboto;
+  font-style: 400;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  background-color: var(--header-bg);
+  color: var(--text-color);
 }
