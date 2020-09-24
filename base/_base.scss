@@ -39,6 +39,7 @@ a{
 .flex{
   display: flex;
   align-items: center;
+
 }
 
 .nav:visited{
@@ -53,4 +54,20 @@ body{
   letter-spacing: 0.03em;
   background-color: var(--header-bg);
   color: var(--text-color);
+}
+
+.nav:visited{
+  color: $title-color;
+}
+
+// ИКОНКИ ЛОГОТИПА
+.icon-WebStudio,
+.icon-Web-Studio-footer{
+  width: 145px;
+  height: 31px;
+  margin-right: 93px;
+}
+
+textarea{
+  resize: none;
 }

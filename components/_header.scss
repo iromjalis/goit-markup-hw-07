@@ -9,6 +9,21 @@
   align-items: center;
 }
 
+%link{
+  padding: 25px 0;
+  position: relative;
+
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: $title-color;
+
+&:hover, &:focus{
+  fill: $accent-color;
+  color: $accent-color;
+  cursor: pointer;
+}
+}
 /* === HEADER ===*/
 
 header{
@@ -16,25 +31,18 @@ header{
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
 }
 
 header .flex.container{
+  @extend %flex;
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
   height: 80px;
 }
 
-.icon-WebStudio,
-.icon-Web-Studio-footer{
-  width: 145px;
-  height: 31px;
-  margin-right: 93px;
-}
-
 .nav-list-item:not(:last-child),
-.address .contacts:not(:last-child){
+.contacts.contacts:not(:last-child){
   display: flex;
   padding-right: 50px;
 }
@@ -46,22 +54,13 @@ header .flex.container{
   transition-property: color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.link,
-.nav:visited{
   color: $title-color;
-}
 
-.link:hover,
-.link:focus,
-.current,
-.contacts:hover svg,
-.contacts:focus svg,
-.contacts:hover,
-.contacts:focus{
+  &:hover, &:focus{
   fill: $accent-color;
   color: $accent-color;
   cursor: pointer;
+}
 }
 
 .link.current::after{
@@ -76,38 +75,45 @@ header .flex.container{
 }
 
 .contacts{
-  color:$text-color;
+  color: $text-color;
   transition-property: color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding: 25px 0;
+
+  &:hover,
+  &:focus{
+  color: $accent-color;
+  cursor: pointer;
+    svg{
+    fill: $accent-color;
+    color: $accent-color;
+    cursor: pointer;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+  .header .address &{
+    display: inline-flex;
+    align-items: center;
+}
 }
 
 .header .address{
-  display: inline-flex;
-  margin-left: auto;
-  align-items: center;
+  display: flex;
+    margin-left:  auto;   
+    align-items: center;
 }
 
-.header .address .contacts{
-  display: inline-flex;
-  align-items: center;
-}
-.icon-envelope{
-  display: block;
-  background-color: $header-bg;
-  margin-right: 10px;
-  align-items: center;
-  fill: var(--text-color);
-  vertical-align: middle;
-}
-
-.icon-tel{
+/*.icon-envelope и .icon-tel сделать вместе*/
+.contacts-icon{
   display: block;
   background-color: $header-bg;
   margin-right: 10px;
   align-items: center;
   fill: $text-color;
 }
+
 
 /* === END HEADER ===*/

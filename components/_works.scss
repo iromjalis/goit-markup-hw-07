@@ -1,5 +1,8 @@
 /* === WORKS ===*/
 .works-img{
+    display: block;
+    width: 370px;
+    height: 294px;
     position: relative;
     border: none;
     overflow: hidden;
@@ -19,11 +22,6 @@
     background: $gradient-hero;
   }
 
-.works-img{
-    display: block;
-    width: 370px;
-    height: 294px;
-  }
   .heading{
     font-weight: bold;
     font-size: 36px;
@@ -32,7 +30,6 @@
     letter-spacing: 0.03em;
     color:$title-color;
     margin-bottom: 50px;
-  
   }
   
   .works-list-item:not(:last-child),

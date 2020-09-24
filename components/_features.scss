@@ -1,5 +1,6 @@
 /* === FEATURES ===*/
-.features.container.flex{
+.features.container{
+  @extend %flex;
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -7,7 +8,10 @@
     display:inline-flex;
   
   }
-  
+  .visually-hidden{
+    @extend %visually-hidden;
+  }
+
   .title{
     font-weight: 700;
     font-size: 14px;
@@ -27,18 +31,23 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  
+
+  .features-list-itemm{
+    width: 170px;
+    height: 90px;
+    background-position: 50% 50%;
+  }
 
    .features-list-item:nth-child(1)::before{
     display: block;
     content: "";
     width: 270px;
     height: 120px;
-    background-color:$team-bg;
+    background-color:$team-bg; 
     background-image: url(../images/SVG/antenna.svg);
-    background-repeat: no-repeat;
+     background-repeat: no-repeat;
     background-position: 50% 50%;
-  } 
+   } 
   
    .features-list-item:nth-child(2)::before{
     display: block;
