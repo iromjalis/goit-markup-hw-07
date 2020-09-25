@@ -377,9 +377,17 @@ template {
   margin: 0;
 }
 
+html {
+  box-sizing: inherit;
+}
+
 button :focus {
   cursor: pointer;
   outline: none;
+}
+
+.logo {
+  content: "";
 }
 
 link {
@@ -467,6 +475,7 @@ header .flex.container {
   padding-top: 25px;
   padding-bottom: 25px;
   height: 80px;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .nav-list-item:not(:last-child),

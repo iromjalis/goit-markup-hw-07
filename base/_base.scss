@@ -5,11 +5,19 @@
   margin: 0;
 }
 
+html{
+  box-sizing: inherit;
+}
+
 button{
   :focus{
   cursor: pointer;
   outline: none;
   }
+}
+
+.logo{
+  content:""
 }
 
 link{
