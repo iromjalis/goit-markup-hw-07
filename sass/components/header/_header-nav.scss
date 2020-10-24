@@ -6,6 +6,7 @@
   }
 }
 .site-nav .link {
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -14,7 +15,6 @@
   transition-duration: 250ms;
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: 90px;
   & {
     color: $title-color;
   }
@@ -43,4 +43,12 @@
   background-color: $accent-color;
   border-radius: 4px;
   position: absolute;
+}
+
+.nav .list:first-child {
+  margin-left: 90px;
+}
+
+.nav .list:not(:last-child) {
+  margin-right: 50px;
 }

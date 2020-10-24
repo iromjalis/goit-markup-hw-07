@@ -1,13 +1,4 @@
-.auth-nav {
-  margin-left: auto;
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    fill: $accent-color;
-  }
-}
-
-.auth-nav .link {
+.auth-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -20,12 +11,16 @@
 
   &:hover .auth-icon,
   &:focus .auth-icon {
-    color: $accent-color;
     fill: $accent-color;
   }
-  &:first-child {
-    margin-right: 50px;
-  }
+}
+
+.auth-nav .list:not(:last-child) {
+  margin-right: 50px;
+}
+
+.auth-nav {
+  margin-left: auto;
 }
 
 .auth-icon {
@@ -37,15 +32,4 @@
   transition-duration: 250ms;
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  .link:hover &,
-  .link:focus & {
-    color: $accent-color;
-    fill: $accent-color;
-  }
-}
-
-.list:hover,
-.list:focus {
-  fill: $accent-color;
-  color: $accent-color;
 }

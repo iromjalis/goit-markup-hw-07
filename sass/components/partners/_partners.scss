@@ -1,0 +1,49 @@
+/* === PARTNERS ===*/
+
+.partner-icon {
+  display: flex;
+  justify-content: center;
+}
+
+/*a*/
+.partner-logo {
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: #afb1b8;
+  transition-duration: 250ms;
+  transition-property: color, fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: #2196f3;
+    fill: #2196f3;
+  }
+}
+
+/*li*/
+.partner-list-item {
+  display: flex;
+  justify-content: space-between;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.partner {
+  display: block;
+  margin: 22px auto;
+}
+.partners-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
