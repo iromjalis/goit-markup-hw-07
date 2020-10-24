@@ -1,5 +1,5 @@
 body {
-  color: #757575;
+  color: $text-color;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -66,4 +66,11 @@ button {
     outline: none;
     border: none;
   }
+}
+
+.nav:hover,
+.nav:focus,
+.link:hover,
+.link:focus {
+  color: #2196f3;
 }
