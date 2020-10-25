@@ -83,6 +83,13 @@ button:active, button:focus {
   color: #2196f3;
 }
 
+.site-nav .link, .auth-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
 .container {
   margin: 0 auto;
   width: 1200px;
@@ -90,17 +97,16 @@ button:active, button:focus {
   padding-right: 15px;
 }
 
-.header {
-  margin-top: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #ececec;
-  /*   outline: 1px solid red;
- */
+.hero-section .container {
+  margin: 0 auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.logo {
+.logo-header, .logo-footer {
   display: inline-block;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #2196f3;
   font-weight: 700;
   font-size: 26px;
@@ -108,7 +114,26 @@ button:active, button:focus {
   letter-spacing: 0.03em;
 }
 
+.site-nav .link, .auth-link, .auth-icon {
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header {
+  margin-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ececec;
+}
+
 .logo-header {
+  color: #2196f3;
+}
+
+.logo-header span {
   color: #212121;
 }
 
@@ -117,18 +142,14 @@ button:active, button:focus {
   fill: #2196f3;
 }
 
+.nav:visited {
+  display: block;
+  color: #212121;
+  position: relative;
+}
+
 .site-nav .link {
   position: relative;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link {
@@ -144,15 +165,9 @@ button:active, button:focus {
   margin-right: 50px;
 }
 
-.nav:visited {
+.site-nav .link.current::after {
   display: block;
-  color: #212121;
-  position: relative;
-}
-
-.current::after {
-  display: block;
-  content: '';
+  content: "";
   margin-top: 28px;
   width: 100%;
   height: 4px;
@@ -170,16 +185,6 @@ button:active, button:focus {
 }
 
 .auth-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #757575;
 }
 
@@ -188,12 +193,12 @@ button:active, button:focus {
   fill: #2196f3;
 }
 
-.auth-nav .list:not(:last-child) {
-  margin-right: 50px;
-}
-
 .auth-nav {
   margin-left: auto;
+}
+
+.auth-nav .list:not(:last-child) {
+  margin-right: 50px;
 }
 
 .auth-icon {
@@ -203,12 +208,6 @@ button:active, button:focus {
   margin-right: 10px;
   fill: #757575;
   vertical-align: middle;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -548,16 +547,12 @@ textarea:hover,
   background-size: cover;
 }
 
-.hero.container {
-  margin: 0 auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+.hero-section .container {
   outline: 1px solid 0;
   background-color: transparent;
 }
 
-.hero-title {
+.hero-section .container .hero-title {
   width: 696px;
   margin: auto auto;
   font-weight: 900;
@@ -934,6 +929,10 @@ textarea:hover,
 }
 
 .logo-footer {
+  color: #2196f3;
+}
+
+.logo-footer span {
   color: #ffffff;
 }
 
@@ -1132,7 +1131,7 @@ footer .hero-btn img {
   margin-right: 8px;
 }
 
-main {
+.portfolio-main {
   padding-top: 94px;
   padding-bottom: 94px;
 }

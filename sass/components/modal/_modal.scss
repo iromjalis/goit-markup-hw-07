@@ -10,8 +10,7 @@
   margin-top: 20px;
   padding: 40px;
 
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   animation: open-close 200ms;
@@ -38,32 +37,34 @@
   }
 }
 
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-  text-align: center;
-
-  &:hover .close-svg,
-  &:focus .close-svg {
-    fill: $accent-color;
+.close {
+  &-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    fill: $title-color;
   }
-}
 
-.close-svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  fill: $title-color;
+  &-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover .close-svg,
+    &:focus .close-svg {
+      fill: $accent-color;
+    }
+  }
 }
 
 /* === FORM === */
@@ -92,54 +93,53 @@ textarea:focus {
 }
 
 /* P секция для ввода*/
-.form-field {
-  position: relative;
-  margin: 0;
+.form {
+  &-field {
+    position: relative;
+    margin: 0;
 
-  &:last-child {
-    text-align: center;
+    &:last-child {
+      text-align: center;
+    }
   }
-}
-
-/* надпись над полем ввода*/
-.form-label {
-  font-size: 12px;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-  color: $text-color;
-  margin-bottom: 4px;
-}
-
-/* поле ввода*/
-.form-input {
-  width: 100%;
-  min-height: 40px;
-  padding-left: 35px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: $text-color;
-  margin-bottom: 10px;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    border-color: $accent-color;
+  /* надпись над полем ввода*/
+  &-label {
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: $text-color;
+    margin-bottom: 4px;
+  }
+  /* поле ввода*/
+  &-input {
+    width: 100%;
+    min-height: 40px;
+    padding-left: 35px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $text-color;
+    margin-bottom: 10px;
+    @extend %transition;
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
+      fill: $accent-color;
+      outline: none;
+    }
+  }
+  &-input:focus + &-label,
+  &-input:not(:placeholder-shown) + &-label {
+    transform: translateY(-50px);
     fill: $accent-color;
+    border-color: $accent-color;
+    color: $accent-color;
+    cursor: pointer;
     outline: none;
   }
-}
-
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  transform: translateY(-50px);
-  fill: $accent-color;
-  border-color: $accent-color;
-  color: $accent-color;
-  cursor: pointer;
-  outline: none;
 }
 
 /* svg */
@@ -184,7 +184,7 @@ textarea:focus {
   margin-top: 4px;
 
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
     border: 1px solid rgb(163, 158, 158);
     border-radius: 4px;
@@ -195,14 +195,11 @@ textarea:focus {
 
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  /* .checkbox:hover::before{
-    transform: translatey(-35px);
-  } */
 
   &::after {
     position: absolute;
     left: 0px;
-    content: '';
+    content: "";
     border-radius: 4px;
     display: inline-block;
     width: 16px;
@@ -212,13 +209,26 @@ textarea:focus {
 
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  &:checked::after {
+    transform: translatey(0);
+  }
+
+  &-text {
+    width: 400px;
+    height: 24px;
+    left: 612px;
+    top: 658px;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $text-color;
+    margin-left: 23px;
+  }
 }
 
-.checkbox:checked::after {
-  transform: translatey(0);
-}
-
-.checkbox-text,
 .contract {
   width: 400px;
   height: 24px;
@@ -232,48 +242,31 @@ textarea:focus {
 
   color: $text-color;
   margin-left: 23px;
+
+  &-title {
+    margin-bottom: 30px;
+  }
+
+  a& {
+    margin: 0;
+    color: $accent-color;
+  }
 }
 
-.contract-title {
-  margin-bottom: 30px;
-}
-a.contract {
-  margin: 0;
-  color: $accent-color;
-}
-.submit {
-  text-align: center;
-  margin-top: 30px;
-}
-.form-input:focus,
-.form-input:hover,
-textarea:focus,
-textarea:hover,
-.checkbox:checked,
-.checkbox:focus {
-  border-color: $accent-color;
-}
+.checkbox {
+  &-icon {
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+  }
 
-.label {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: inline;
+  &:checked + .icon {
+    background-image: url(../images/SVG/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: 2px solid $accent-color;
+    border: none;
+  }
 }
-
-.checkbox-icon {
-  margin: 0;
-  width: 15px;
-  height: 15px;
-  border-radius: 4px;
-}
-
-.checkbox:checked + .icon {
-  background-image: url(../images/SVG/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
-  border: 2px solid $accent-color;
-  border: none;
-}
-
 /* === END CHECKBOX ===*/

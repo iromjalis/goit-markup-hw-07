@@ -1,12 +1,6 @@
 .auth-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  transition-duration: 250ms;
-  transition-property: color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %link;
+  @extend %transition;
   color: $text-color;
 
   &:hover .auth-icon,
@@ -15,12 +9,12 @@
   }
 }
 
-.auth-nav .list:not(:last-child) {
-  margin-right: 50px;
-}
-
 .auth-nav {
   margin-left: auto;
+
+  & .list:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .auth-icon {
@@ -29,7 +23,5 @@
   fill: $text-color;
   vertical-align: middle;
 
-  transition-duration: 250ms;
-  transition-property: color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 }

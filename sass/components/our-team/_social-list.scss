@@ -6,45 +6,31 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-}
 
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid transparent;
-  background-color: transparent;
-  width: 44px;
-  height: 44px;
+  .social-link {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    @extend %transition;
 
-  transition-duration: 250ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+      background-color: $accent-color;
+    }
 
-  &:hover,
-  &:focus {
-    fill: $white-color;
-    border: 1px solid $accent-color;
-    background-color: $accent-color;
+    &:hover .social-icon,
+    &:focus .social-icon {
+      fill: $white-color;
+    }
+
+    .social-icon {
+      fill: #afb1b8;
+      @extend %transition;
+    }
   }
 
-  &:hover .social-icon,
-  &:focus .social-icon {
-    fill: $white-color;
-    border: 1px solid $accent-color;
-    background-color: $accent-color;
+  .social-item:not(:last-child) {
+    margin-right: 10px;
   }
-}
-
-.social-item:not(:last-child),
-.social-item-footer:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-icon {
-  fill: #afb1b8;
-  transition-duration: 250ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
