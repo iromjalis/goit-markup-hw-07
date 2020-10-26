@@ -2,8 +2,8 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $hero-bg;
-}
 
-.footer .container {
-  align-items: flex-start;
+  &.container {
+    align-items: flex-start;
+  }
 }

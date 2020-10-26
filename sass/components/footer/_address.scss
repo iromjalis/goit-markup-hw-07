@@ -5,9 +5,9 @@
   letter-spacing: 0.03em;
   margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
-}
 
-.address-link.map {
-  color: $white-color;
-  margin-top: 20px;
+  &.map {
+    color: $white-color;
+    margin-top: 20px;
+  }
 }
